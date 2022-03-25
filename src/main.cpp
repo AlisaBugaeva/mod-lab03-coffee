@@ -6,7 +6,7 @@ using std::cout;
 using std::endl;
 using std::cin;
 
-void main() {
+int main() {
     std::string menu[5] = { "black tea" , "green tea", "cappuccino", "latte", "hot chocolate" };
     int prices[5] = { 90, 90, 120, 130, 100 };
     int customerChoice;
