@@ -11,7 +11,7 @@ TEST(test1, waitState) {
       a1.on();
       a1.coin(130);
       a1.choice(3);
-      STATES result = a1.getState;
+      STATES result = a1.getState();
       EXPECT_EQ(WAIT, result);
 }
 
@@ -22,7 +22,7 @@ TEST(test2, offState) {
       Automata a1 ( menu, prices);
       a1.on();
       a1.off();
-      STATES result = a1.getState;
+      STATES result = a1.getState();
       EXPECT_EQ(WAIT, result);
 }
 
@@ -33,6 +33,6 @@ TEST(test3, acceptState) {
       Automata a1 ( menu, prices);
       a1.on();
       a1.coin(10);
-      STATES result = a1.getState;
+      STATES result = a1.getState();
       EXPECT_EQ(WAIT, result);
 }
