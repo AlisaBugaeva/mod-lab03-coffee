@@ -47,13 +47,14 @@ void Automata::coin(int coins) {
 
 void Automata::getMenu() {
     for (int i = 0; i < 5; i++) {
-        cout << i << " - Drink: " << menu[i] << 
+        cout << i << " - Drink: " << menu[i] <<
             " price:  " << prices[i] << endl;
     }
 }
 
-void Automata::getState() {
+STATES Automata::getState() {
     cout << "The : Automata is in state " << state << endl;
+    return state;
 }
 
 void Automata::choice(int drinkNumber) {
