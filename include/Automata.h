@@ -1,3 +1,5 @@
+// Copyright 2022 UNN-IASR
+
 #pragma once
 #include <iostream>
 #include <string>
@@ -5,7 +7,7 @@
 enum STATES { COOK, CHECK, ACCEPT, WAIT, OFF };
 
 class Automata {
-public:
+ public:
     void on(); // включение автомата;
     void off(); // выключение автомата;
     void coin(int coins); // занесение денег на счёт пользователем;
@@ -18,7 +20,7 @@ public:
     void finish(); // завершение обслуживания пользователя.
     Automata(std::string* menu, int* prices); //конструктор
 
-private:
+ private:
     double cash; // для хранения текущей суммы;
     std::string menu[5]; // массив строк названий напитков;
     int prices[5]; // массив цен напитков;
