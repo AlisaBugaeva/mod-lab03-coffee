@@ -66,7 +66,7 @@ TEST(test4, cancel) {
       a1.coin(10);
       a1.cancel();
       STATES result = a1.getState();
-      EXPECT_EQ(WAIT, result);
+      EXPECT_EQ(ACCEPT, result);
 }
 
 TEST(test5, notEnoughMoney) {
