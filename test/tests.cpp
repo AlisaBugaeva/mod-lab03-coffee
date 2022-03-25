@@ -4,13 +4,13 @@
 #include "Automata.h"
 
 TEST(test1, waitState) {
-      std::string menu[5] = { 
-            "black tea" , 
-            "green tea", 
-            "cappuccino", 
-            "latte", 
-            "hot chocolate" 
-      };
+      std::string menu[5] = {
+        "black tea",
+        "green tea",
+        "cappuccino",
+        "latte",
+        "hot chocolate"
+     };
       int prices[5] = { 90, 90, 120, 130, 100 };
       Automata a1(menu, prices);
       a1.on();
@@ -21,13 +21,13 @@ TEST(test1, waitState) {
 }
 
 TEST(test2, offState) {
-      std::string menu[5] = { 
-            "black tea" , 
-            "green tea", 
-            "cappuccino", 
-            "latte", 
-            "hot chocolate" 
-      };
+      std::string menu[5] = {
+        "black tea",
+        "green tea",
+        "cappuccino",
+        "latte",
+        "hot chocolate"
+     };
       int prices[5] = { 90, 90, 120, 130, 100 };
       Automata a1(menu, prices);
       a1.on();
@@ -37,13 +37,13 @@ TEST(test2, offState) {
 }
 
 TEST(test3, acceptState) {
-      std::string menu[5] = { 
-            "black tea" , 
-            "green tea", 
-            "cappuccino", 
-            "latte", 
-            "hot chocolate" 
-      };
+      std::string menu[5] = {
+        "black tea",
+        "green tea",
+        "cappuccino",
+        "latte",
+        "hot chocolate"
+     };
       int prices[5] = { 90, 90, 120, 130, 100 };
       Automata a1(menu, prices);
       a1.on();
