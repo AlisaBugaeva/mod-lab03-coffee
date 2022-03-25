@@ -1,10 +1,10 @@
+// Copyright 2022 UNN-IASR
 #include "Automata.h"
-
 using std::cout;
 using std::endl;
 
 
-Automata::Automata( std::string *menuDrinks, int *pricesDrinks) {
+Automata::Automata(std::string *menuDrinks, int *pricesDrinks) {
     for (int i = 0; i < 5; i++) {
         menu[i] = menuDrinks[i];
         prices[i] = pricesDrinks[i];
@@ -19,8 +19,7 @@ void Automata::on() {
         cout << "The Automata is working!" << endl;
         getMenu();
         cout << "Choose a drink and put money in the Automata " << endl;
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
@@ -29,8 +28,7 @@ void Automata::off() {
     if (state == WAIT) {
         state = OFF;
         cout << "Turning off..." << endl;
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
@@ -42,16 +40,15 @@ void Automata::coin(int coins) {
         cout << "Counting your money" << endl;
         cout << "The balance is " << cash<< endl;
         cout << "Press number of selected drink" << endl;
-
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
 
 void Automata::getMenu() {
     for (int i = 0; i < 5; i++) {
-        cout << i << " - Drink: " << menu[i] << " price:  " << prices[i] << endl;
+        cout << i << " - Drink: " << menu[i] << 
+            " price:  " << prices[i] << endl;
     }
 }
 
@@ -64,8 +61,7 @@ void Automata::choice(int drinkNumber) {
         state = CHECK;
         cout << "Processing your choice" << endl;
         check(drinkNumber);
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
@@ -77,13 +73,11 @@ void Automata::check(int drinkNumber) {
             cout << "Everything is correct, just wait" << endl;
             cook();
             cash = 0;
-        }
-        else {
+        } else {
             state = ACCEPT;
             cout << "Please, put the correct sum of money!" << endl;
         }
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
@@ -93,8 +87,7 @@ void Automata::cancel() {
         cash = 0;
         state = WAIT;
         cout << "Please, take your money back!" << endl;
-    }
-    else if (state == COOK) {
+    } else if (state == COOK) {
         cout << "Sorry you can't stop the process now" << endl;
     }
 }
@@ -103,8 +96,7 @@ void Automata::cook() {
     if (state == COOK) {
         cout << "Your drink is cooking" << endl;
         finish();
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
@@ -115,8 +107,7 @@ void Automata::finish() {
         cout << "Your drink is ready. Take it!" << endl;
         cout << "Ending the process..." << endl;
         on();
-    }
-    else {
+    } else {
         cout << "Sorry, you can't do this action now" << endl;
     }
 }
